@@ -5,8 +5,9 @@ const caminhoBase = path.join(__dirname)
 
 const app =express()
 
-app.get('/', (require, resposta) =>{
-    resposta.send("Estou funcionando com o express")
+
+app.get('/', (requisicao, resposta) =>{
+    resposta.sendFile(`${caminhoBase}/index.html`)
 })
 
 app.listen(3000, () =>{
